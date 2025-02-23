@@ -1,4 +1,4 @@
-<!-- One-Page Portfolio for Spence Artworks -->
+><!-- One-Page Portfolio for Spence Artworks -->
 ---
 layout: none  # No default Jekyll layout for full customization
 ---
@@ -18,19 +18,6 @@ layout: none  # No default Jekyll layout for full customization
             margin: 0;
             padding: 0;
             text-align: center;
-        }
-        header {
-            background: url('/assets/images/banner.jpg') center/cover no-repeat;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-transform: uppercase;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
         }
         .gallery {
             display: grid;
@@ -63,15 +50,13 @@ layout: none  # No default Jekyll layout for full customization
     </style>
 </head>
 <body>
-    <header>
-        <h1>Spence Artworks</h1>
-        <p>Modern Pin-up Illustrations by Mr. Spence</p>
-    </header>
+    <h1>Spence Artworks</h1>
+    <p>Modern Pin-up Illustrations by Mr. Spence</p>
 
     <section class="gallery">
         {% for i in (3128..3075) reversed %}
             {% if i != 3100 and i != 3102 and i != 3103 and i != 3105 and i != 3106 %}
-                <img src="/assets/images/IMG_{{ i }}.jpeg" alt="Artwork {{ i }}">
+                <img src="IMG_{{ i }}.jpeg" alt="Artwork {{ i }}">
             {% endif %}
         {% endfor %}
     </section>
@@ -87,3 +72,4 @@ layout: none  # No default Jekyll layout for full customization
     </section>
 </body>
 </html>
+
