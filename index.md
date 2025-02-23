@@ -1,55 +1,89 @@
-## My Artwork Gallery  
+<!-- One-Page Portfolio for Spence Artworks -->
+---
+layout: none  # No default Jekyll layout for full customization
+---
 
-Here are some of my favorite pieces:  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spence Artworks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: url('/assets/images/banner.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .about {
+            padding: 50px 20px;
+            background: #222;
+        }
+        .socials {
+            margin-top: 20px;
+        }
+        .socials a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spence Artworks</h1>
+        <p>Modern Pin-up Illustrations by Mr. Spence</p>
+    </header>
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="IMG_3075.jpeg" alt="Artwork 1" width="300">
-  <img src="IMG_3076.jpeg" alt="Artwork 2" width="300">
-  <img src="IMG_3077.jpeg" alt="Artwork 3" width="300">
-  <img src="IMG_3078.jpeg" alt="Artwork 4" width="300">
-  <img src="IMG_3079.jpeg" alt="Artwork 5" width="300">
-  <img src="IMG_3080.jpeg" alt="Artwork 6" width="300">
-  <img src="IMG_3081.jpeg" alt="Artwork 7" width="300">
-  <img src="IMG_3082.jpeg" alt="Artwork 8" width="300">
-  <img src="IMG_3083.jpeg" alt="Artwork 9" width="300">
-  <img src="IMG_3084.jpeg" alt="Artwork 10" width="300">
-  <img src="IMG_3085.jpeg" alt="Artwork 11" width="300">
-  <img src="IMG_3086.jpeg" alt="Artwork 12" width="300">
-  <img src="IMG_3087.jpeg" alt="Artwork 13" width="300">
-  <img src="IMG_3088.jpeg" alt="Artwork 14" width="300">
-  <img src="IMG_3089.jpeg" alt="Artwork 15" width="300">
-  <img src="IMG_3090.jpeg" alt="Artwork 16" width="300">
-  <img src="IMG_3091.jpeg" alt="Artwork 17" width="300">
-  <img src="IMG_3092.jpeg" alt="Artwork 18" width="300">
-  <img src="IMG_3093.jpeg" alt="Artwork 19" width="300">
-  <img src="IMG_3094.jpeg" alt="Artwork 20" width="300">
-  <img src="IMG_3095.jpeg" alt="Artwork 21" width="300">
-  <img src="IMG_3096.jpeg" alt="Artwork 22" width="300">
-  <img src="IMG_3097.jpeg" alt="Artwork 23" width="300">
-  <img src="IMG_3098.jpeg" alt="Artwork 24" width="300">
-  <img src="IMG_3099.jpeg" alt="Artwork 25" width="300">
-  <img src="IMG_3101.jpeg" alt="Artwork 27" width="300">
-  <img src="IMG_3104.jpeg" alt="Artwork 29" width="300">
-  <img src="IMG_3107.jpeg" alt="Artwork 30" width="300">
-  <img src="IMG_3108.jpeg" alt="Artwork 31" width="300">
-  <img src="IMG_3109.jpeg" alt="Artwork 32" width="300">
-  <img src="IMG_3110.jpeg" alt="Artwork 33" width="300">
-  <img src="IMG_3111.jpeg" alt="Artwork 34" width="300">
-  <img src="IMG_3112.jpeg" alt="Artwork 35" width="300">
-  <img src="IMG_3113.jpeg" alt="Artwork 36" width="300">
-  <img src="IMG_3114.jpeg" alt="Artwork 37" width="300">
-  <img src="IMG_3115.jpeg" alt="Artwork 38" width="300">
-  <img src="IMG_3116.jpeg" alt="Artwork 39" width="300">
-  <img src="IMG_3117.jpeg" alt="Artwork 40" width="300">
-  <img src="IMG_3118.jpeg" alt="Artwork 41" width="300">
-  <img src="IMG_3119.jpeg" alt="Artwork 42" width="300">
-  <img src="IMG_3120.jpeg" alt="Artwork 43" width="300">
-  <img src="IMG_3121.jpeg" alt="Artwork 44" width="300">
-  <img src="IMG_3122.jpeg" alt="Artwork 45" width="300">
-  <img src="IMG_3123.jpeg" alt="Artwork 46" width="300">
-  <img src="IMG_3124.jpeg" alt="Artwork 47" width="300">
-  <img src="IMG_3125.jpeg" alt="Artwork 48" width="300">
-  <img src="IMG_3126.jpeg" alt="Artwork 49" width="300">
-  <img src="IMG_3127.jpeg" alt="Artwork 50" width="300">
-  <img src="IMG_3128.jpeg" alt="Artwork 51" width="300">
-</div>
+    <section class="gallery">
+        {% for i in (3128..3075) reversed %}
+            {% if i != 3100 and i != 3102 and i != 3103 and i != 3105 and i != 3106 %}
+                <img src="/assets/images/IMG_{{ i }}.jpeg" alt="Artwork {{ i }}">
+            {% endif %}
+        {% endfor %}
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Scottish pin-up artist bringing classic beauty into the modern era. My work is inspired by vintage glamour, bold confidence, and watercolor mastery.</p>
+        <p>Follow my journey and discover more of my work on social media:</p>
+        <div class="socials">
+            <a href="https://www.tiktok.com/@spencepinups">TikTok</a>
+            <a href="https://www.facebook.com/SpencePinups/photos/">Facebook</a>
+        </div>
+    </section>
+</body>
+</html>
