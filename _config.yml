@@ -1,0 +1,5 @@
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-include-cache
+title: "Spence Artworks"
+description: "A gallery of my artwork"
