@@ -28,9 +28,7 @@ Here are some of my favorite pieces:
   <img src="IMG_3097.jpeg" alt="Artwork 23" width="300">
   <img src="IMG_3098.jpeg" alt="Artwork 24" width="300">
   <img src="IMG_3099.jpeg" alt="Artwork 25" width="300">
-  <img src="IMG_3100.jpeg" alt="Artwork 26" width="300">
   <img src="IMG_3101.jpeg" alt="Artwork 27" width="300">
-  <img src="IMG_3102.jpeg" alt="Artwork 28" width="300">
   <img src="IMG_3104.jpeg" alt="Artwork 29" width="300">
   <img src="IMG_3107.jpeg" alt="Artwork 30" width="300">
   <img src="IMG_3108.jpeg" alt="Artwork 31" width="300">
