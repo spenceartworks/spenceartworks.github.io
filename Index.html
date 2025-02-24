@@ -1,80 +1,92 @@
-
----
-layout: none  # Disables default layout for full customization
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spence Artworks</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <title>Scottish Pin-Up Artist - Spence Artworks</title>
+    <meta name="description" content="Mr. Spence is a Scottish pin-up artist based in Fife, Scotland, known for modern pin-up artwork blending classic beauty with contemporary style.">
+    <meta property="og:title" content="Scottish Pin-Up Artist - Spence Artworks">
+    <meta property="og:description" content="Explore the modern pin-up artwork of Mr. Spence, a Scottish artist capturing themes of empowerment, vulnerability, and femininity.">
+    <meta property="og:image" content="spence.jpg">
+    <meta property="og:url" content="https://spenceartworks.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://spenceartworks.com">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #111;
-            color: #fff;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: white;
             text-align: center;
+            color: #333;
         }
-        header {
-            padding: 60px 20px;
-            background: url('/assets/images/banner.jpg') center/cover no-repeat;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-            position: relative;
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
         }
-        .social-icons {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+        .bio {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.2em;
         }
-        .social-icons a {
-            margin: 0 10px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5rem;
+        .bio img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 10px;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: 20px auto;
         }
         .gallery img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+            border-radius: 5px;
+            loading: lazy;
         }
-        .gallery img:hover {
-            transform: scale(1.05);
+        .gallery div {
+            padding: 10px;
+        }
+        .socials {
+            margin: 20px 0;
+        }
+        .socials a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #333;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <header>
-        Spence Artworks
-        <div class="social-icons">
-            <a href="https://www.tiktok.com/@spencepinups" target="_blank">TikTok</a>
-            <a href="https://www.facebook.com/SpencePinups/photos/" target="_blank">Facebook</a>
-        </div>
-    </header>
-    <section class="gallery">
-        {% for image in site.static_files %}
-            {% if image.path contains 'assets/images' and image.extname == '.jpeg' %}
-                <img src="{{ image.path }}" alt="Artwork">
-            {% endif %}
-        {% endfor %}
-    </section>
+    <h1>SPENCE ARTWORKS</h1>
+    <div class="bio">
+        <img src="spence.jpg" alt="Portrait of Mr. Spence, Scottish pin-up artist">
+        <p>Mr. Spence is a Scottish pin-up artist based in Fife, Scotland, known for his modern pin-up artwork. He collaborates with international models, using watercolor illustrations to capture themes of empowerment, vulnerability, and femininity. His work blends classic beauty with contemporary style, aiming to evoke appreciation for both the seen and unseen aspects of the human spirit.</p>
+    </div>
+    <div class="gallery">
+        <div><img src="IMG_3075.jpg" alt="Elegant Pin-Up Pose"><h3>Elegant Pin-Up Pose</h3><p>A striking watercolor piece featuring a confident model in a vintage-inspired setting.</p></div>
+        <div><img src="IMG_3076.jpg" alt="Soft Beauty Illustration"><h3>Soft Beauty Illustration</h3><p>A delicate rendering that highlights the interplay of light and shadow.</p></div>
+        <div><img src="IMG_3077.jpg" alt="Empowered Stance"><h3>Empowered Stance</h3><p>A bold statement of femininity and strength through vibrant colors.</p></div>
+        <div><img src="IMG_3078.jpg" alt="Vintage Glamour"><h3>Vintage Glamour</h3><p>A timeless portrait reminiscent of classic Hollywood icons.</p></div>
+        <div><img src="IMG_3079.jpg" alt="Sensual Watercolor Art"><h3>Sensual Watercolor Art</h3><p>Delicate and expressive, this artwork captures intimate emotions.</p></div>
+        <div><img src="IMG_3080.jpg" alt="Mystic Pin-Up Aesthetic"><h3>Mystic Pin-Up Aesthetic</h3><p>A fusion of mystery and allure in a modern pin-up style.</p></div>
+        <div><img src="IMG_3081.jpg" alt="Feminine Strength"><h3>Feminine Strength</h3><p>A celebration of resilience and beauty in artistic form.</p></div>
+        <div><img src="IMG_3082.jpg" alt="Playful Vintage Chic"><h3>Playful Vintage Chic</h3><p>A lighthearted yet elegant depiction of classic pin-up fashion.</p></div>
+        <div><img src="IMG_3083.jpg" alt="Modern Elegance"><h3>Modern Elegance</h3><p>A perfect balance between contemporary art and traditional charm.</p></div>
+        <div><img src="IMG_3084.jpg" alt="Graceful Pin-Up Silhouette"><h3>Graceful Pin-Up Silhouette</h3><p>Soft hues and fluid lines create a dreamlike atmosphere.</p></div>
+        <div><img src="IMG_3085.jpg" alt="Timeless Beauty Illustration"><h3>Timeless Beauty Illustration</h3><p>A nostalgic yet fresh interpretation of classic femininity.</p></div>
+        <div><img src="IMG_3086.jpg" alt="Artistic Nude Watercolor"><h3>Artistic Nude Watercolor</h3><p>A tasteful exploration of form, expression, and sensuality.</p></div>
+    </div>
+    <div class="socials">
+        <a href="https://spencepinups.com" target="_blank">🌍</a>
+        <a href="https://twitter.com/spencepinups" target="_blank">🐦</a>
+        <a href="https://instagram.com/spencepinups" target="_blank">📷</a>
+        <a href="https://youtube.com/channel/UCSpencePinups" target="_blank">▶️</a>
+        <a href="https://facebook.com/SpencePinups" target="_blank">📘</a>
+    </div>
 </body>
 </html>
